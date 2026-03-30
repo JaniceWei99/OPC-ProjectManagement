@@ -24,6 +24,7 @@ public/
 data/
   board.db               — SQLite database (auto-created)
 doc/
+  user-guide.md          — User guide (features, workflow, shortcuts)
   deploy.md              — Deployment guide (Docker, Helm, bare metal)
   competitive-analysis.md — Competitive analysis + changelog
 openspec/changes/        — OpenSpec change archive (proposals, designs, specs, tasks)

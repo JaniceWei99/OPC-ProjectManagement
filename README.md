@@ -139,6 +139,7 @@ PORT=8080 npm start
 ├── data/
 │   └── board.db             # SQLite 数据库 (自动创建)
 ├── doc/
+│   ├── user-guide.md            # 用户指南 (功能、工作流、快捷键)
 │   ├── deploy.md                # 部署指南 (Docker / Helm / 裸机)
 │   └── competitive-analysis.md  # 竞品分析 + 版本变更记录
 └── openspec/                # OpenSpec 变更归档 (proposals, designs, specs, tasks)
