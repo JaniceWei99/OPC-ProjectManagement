@@ -24,8 +24,11 @@ public/
 data/
   board.db               — SQLite database (auto-created)
 doc/
-  Sepc.md                — Full specification
   competitive-analysis.md — Competitive analysis + changelog
+openspec/changes/        — OpenSpec change archive (proposals, designs, specs, tasks)
+helm/solohelm/           — Helm Chart for Kubernetes deployment
+Dockerfile               — Multi-stage Docker build
+.dockerignore            — Docker build exclusions
 ```
 
 ## Layout
@@ -49,6 +52,14 @@ curl -s -X POST http://localhost:3000/api/tasks \
   -H 'Content-Type: application/json' \
   -d '{"title":"","priority":"P9"}' 
 # Should return 400
+
+# Docker build
+docker build -t solohelm:latest .
+docker run -d --name solohelm -p 3000:3000 -v solohelm-data:/app/data solohelm:latest
+
+# Helm lint
+helm lint ./helm/solohelm
+helm template test-release ./helm/solohelm
 ```
 
 ## API Endpoints
@@ -87,3 +98,5 @@ curl -s -X POST http://localhost:3000/api/tasks \
 - `better-sqlite3` doesn't work on this system (no `make`), using `sql.js` instead
 - Database auto-migrates: adds new columns if missing, imports from old JSON if present
 - No build step needed — everything runs directly
+- Docker: multi-stage build (node:20-alpine), non-root user, healthcheck included
+- Helm Chart: PVC for data persistence, SecurityContext, Ingress support, HPA optional
