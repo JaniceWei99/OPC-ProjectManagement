@@ -538,7 +538,7 @@ app.get('/api/export', (_req, res) => {
 });
 
 /* ---------- Start ---------- */
-async function start() {
+async function initDB() {
   const SQL = await initSqlJs();
 
   // Load existing DB or create new
@@ -553,13 +553,22 @@ async function start() {
 
   initSchema();
   migrateFromJSON();
+}
+
+async function start() {
+  await initDB();
 
   app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
   });
 }
 
-start().catch(err => {
-  console.error('Failed to start server:', err);
-  process.exit(1);
-});
+// Only auto-start when run directly (not when required by tests)
+if (require.main === module) {
+  start().catch(err => {
+    console.error('Failed to start server:', err);
+    process.exit(1);
+  });
+}
+
+module.exports = { app, initDB };

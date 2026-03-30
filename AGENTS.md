@@ -16,9 +16,9 @@ npm start          # Start server at http://localhost:3000
 ```
 server.js                — Express server (~565 lines)
 public/
-  index.html             — Single-page app: sidebar nav + Ideas/Board/Analytics tabs (~337 lines)
-  app.js                 — Frontend logic + i18n system (~1620 lines)
-  style.css              — All styles incl. sidebar (~329 lines, dark/light theme)
+  index.html             — Single-page app: sidebar nav + Ideas/Board/Analytics tabs (~350 lines)
+  app.js                 — Frontend logic + i18n system (~1705 lines)
+  style.css              — All styles incl. sidebar (~364 lines, dark/light theme)
   manifest.json          — PWA manifest
   sw.js                  — Service Worker for offline caching
 data/
@@ -43,6 +43,9 @@ Dockerfile               — Multi-stage Docker build
 ```bash
 # Start server
 node server.js
+
+# Run tests
+npm test
 
 # Quick smoke test (all endpoints)
 curl -s http://localhost:3000/api/tasks | head -c 100

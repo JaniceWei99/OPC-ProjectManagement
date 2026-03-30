@@ -316,10 +316,12 @@
 
 | 格式 | 说明 |
 |------|------|
-| JSON | 完整数据，可用于备份和导入恢复 |
-| CSV | 表格格式，可在 Excel/Google Sheets 中打开 |
+| JSON | 完整数据，可用于备份和导入恢复（服务端 API） |
+| CSV | 表格格式，可在 Excel/Google Sheets 中打开（浏览器端生成） |
 
 导出的文件命名格式：`solohelm-YYYY-MM-DD.json` / `.csv`
+
+> CSV 导出在浏览器端生成并直接下载，不经过服务端 API。JSON 导出通过 `/api/export` 获取。
 
 ### 导入
 
