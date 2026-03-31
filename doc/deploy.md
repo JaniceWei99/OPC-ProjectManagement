@@ -43,8 +43,8 @@
 ## 本地开发
 
 ```bash
-git clone https://github.com/JaniceWei99/OPC-ProjectManagement.git
-cd OPC-ProjectManagement
+git clone https://github.com/JaniceWei99/SoloHelm.git
+cd SoloHelm
 npm install
 npm start
 ```

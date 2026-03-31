@@ -6,8 +6,8 @@ RUN npm ci --omit=dev
 
 # ---- Runtime stage ----
 FROM node:20-alpine
-LABEL maintainer="SoloHelm <github.com/JaniceWei99/OPC-ProjectManagement>"
-LABEL org.opencontainers.image.source="https://github.com/JaniceWei99/OPC-ProjectManagement"
+LABEL maintainer="SoloHelm <github.com/JaniceWei99/SoloHelm>"
+LABEL org.opencontainers.image.source="https://github.com/JaniceWei99/SoloHelm"
 LABEL org.opencontainers.image.description="SoloHelm — Personal project management for solo creators"
 
 RUN addgroup -S solohelm && adduser -S solohelm -G solohelm
