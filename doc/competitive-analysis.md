@@ -5,6 +5,33 @@
 
 ---
 
+## 2026-04-01 · V2.0.2 一键安装脚本
+
+### 升级总览
+
+新增跨平台一键安装脚本，支持 Windows/macOS/Linux 双击部署，零门槛使用。
+
+### 已完成功能
+
+| 新功能 | 状态 | 说明 |
+|--------|------|------|
+| Windows 安装脚本 | **Done** | `install-windows.bat` 双击运行，自动通过 winget/MSI 安装 Node.js |
+| macOS 安装脚本 | **Done** | `install-macos.command` 双击运行，自动通过 Homebrew 安装 Node.js |
+| Linux 安装脚本 | **Done** | `install-linux.sh` 终端执行，支持 `--service` / `--docker` / `--uninstall` |
+| 自动环境检测 | **Done** | 检测 OS 和 Node.js 版本，不满足时自动安装 |
+| 自定义配置 | **Done** | 支持 `PORT` 和 `NPM_MIRROR=cn` 环境变量 |
+| 文档更新 | **Done** | README、deploy.md、user-guide.md 同步更新安装说明 |
+
+### 与竞品差距对比更新
+
+| 功能 | V3 状态 | V2.0.2 状态 | Trello | Linear | Todoist |
+|------|---------|-------------|--------|--------|---------|
+| 零配置启动 | npm install | **双击即用** | 需注册 | 需注册 | 需注册 |
+| 自托管部署 | 手动 | **一键脚本** | 厂商托管 | 厂商托管 | 厂商托管 |
+| 跨平台安装 | 仅终端 | **Win/Mac/Linux** | N/A | N/A | N/A |
+
+---
+
 ## 2026-03-25 · V3 单页重构 + i18n + 侧边栏
 
 ### 升级总览

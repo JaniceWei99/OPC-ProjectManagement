@@ -6,6 +6,7 @@
 
 ## 目录
 
+0. [快速开始](#快速开始)
 1. [界面总览](#界面总览)
 2. [灵感池 (Ideas)](#灵感池-ideas)
 3. [看板 (Board)](#看板-board)
@@ -26,6 +27,32 @@
 18. [撤销操作](#撤销操作)
 19. [PWA 离线支持](#pwa-离线支持)
 20. [任务生命周期](#任务生命周期)
+
+---
+
+## 快速开始
+
+### 一键安装
+
+从 GitHub 下载 ZIP 解压后，双击对应系统的文件即可：
+
+| 系统 | 文件 | 操作 |
+|------|------|------|
+| **Windows** | `install-windows.bat` | 双击运行 |
+| **macOS** | `install-macos.command` | 双击运行 |
+| **Linux** | `install-linux.sh` | 终端执行 `bash install-linux.sh` |
+
+脚本会自动安装 Node.js（如未安装）、安装依赖、启动服务并打开浏览器。
+
+> macOS 首次双击如提示"无法验证开发者"：右键点击文件 → 选择"打开" → 点击"打开"。
+
+### 手动安装
+
+```bash
+npm install && npm start
+```
+
+打开 http://localhost:3000 即可使用。详细部署方式（Docker / Helm / systemd）见 [部署指南](deploy.md)。
 
 ---
 

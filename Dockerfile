@@ -9,6 +9,7 @@ FROM node:20-alpine
 LABEL maintainer="SoloHelm <github.com/JaniceWei99/SoloHelm>"
 LABEL org.opencontainers.image.source="https://github.com/JaniceWei99/SoloHelm"
 LABEL org.opencontainers.image.description="SoloHelm — Personal project management for solo creators"
+LABEL org.opencontainers.image.version="2.0.2"
 
 RUN addgroup -S solohelm && adduser -S solohelm -G solohelm
 
